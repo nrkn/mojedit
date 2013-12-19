@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mojedit</title>
+    <link rel="stylesheet" href="../../jquery.mojedit.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #eee;
+      }
+      
+      .page {
+        background: #fff;
+        color: #222;
+        padding: 1em;
+      }
+      
+      .button-group-wrapper {
+        margin-bottom: 1em;
+      }
+      
+      .button-group {
+        display: inline-block;
+        margin-right: 1em;
+      }
+      
+      .button {
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 0.5em;
+        margin: 0.1em;
+        text-decoration: none;
+      }
+
+      .button, .mode-group .secondary.button {
+        background: #ddd;
+        color: #222;
+      }
+      
+      .mode-group .button {
+        background: #39f;
+        color: #fff;
+      }
+      
+      .disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>mojedit</h1>
+    <div class="editor"></div> 
+    
+    <script src="../../vendor/jquery.js"></script>
+    <script src="../../vendor/jquery-ui.js"></script>
+    <script src="../../vendor/rangy-core.js"></script>
+    <script src="../../vendor/rangy-cssclassapplier.js"></script>
+    <script src="../../jquery.mojedit.js"></script>
+    <script>
+      $( function(){
+        var $editor = $( '.editor' );
+        
+        $editor.mojedit({
+          onModeChange: function( mode ){
+            var $modes = $( '.mode-group .button' );
+            $modes.addClass( 'secondary' );
+            $mode = $modes.filter( '[data-action="' + mode + '"]' );
+            $mode.removeClass( 'secondary' );
+            
+            $( '.text-group .button' ).toggleClass( 'disabled', mode === 'move' );
+          }
+        });
+      });      
+    </script>
+  </body>
+</html>

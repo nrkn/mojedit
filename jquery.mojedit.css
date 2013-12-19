@@ -1,0 +1,23 @@
+.mojedit .image-container {
+  display: inline-block;
+}
+
+.mojedit img {
+  width: 100px;
+  height: auto;
+}
+
+.mojedit.move > * {
+  outline: 1px dotted #ccc;
+  cursor: move;
+}
+
+.mojedit .position {
+  color: #39f;
+  display: inline-block;
+  padding: 1em;
+}
+
+.mojedit.edit >:focus {
+  outline: 1px dotted #39f;
+}

@@ -1,0 +1,55 @@
+body {
+  background: #eee;
+}
+
+.top-bar .name h1 a.brand {
+  font-style: italic;
+  color: #7cf;
+  font-size: 130%;
+}
+
+.panel.tool-bar {
+  background: #f6f6f6;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.panel.tool-bar .button {
+  padding: 0.4em 0.8em;
+}
+
+.workspace {
+  padding: 1em;
+}
+
+.page {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 1em;
+  box-shadow: 0 0.1em 0.25em rgba( 0, 0, 0, 0.25 );  
+}
+
+.page .image-container {
+  display: inline-block;
+}
+
+.page img {
+  width: 100px;
+  height: auto;
+}
+
+.page.move > * {
+  outline: 1px dotted #ccc;
+  cursor: move;
+}
+
+.position {
+  color: #39f;
+  display: inline-block;
+  padding: 1em;
+}
+
+.page.edit >:focus {
+  outline: 1px dotted #39f;
+}
