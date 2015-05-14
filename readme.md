@@ -12,7 +12,7 @@ At this stage it's more a proof of concept, it would probably take some work to 
 
 There's no documentation yet. See examples and source. SORRY.
 
-[Demo](http://mojedit.com/)
+[Demo](http://nrkn.github.io/mojedit/)
 
 ##license
 
